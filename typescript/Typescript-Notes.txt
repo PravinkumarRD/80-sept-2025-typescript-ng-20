@@ -1,0 +1,87 @@
+Why Typescript? [30+ reasons]
+
+What is Typescript?
+	Typescript is a superset of JavaScript with strong typing support. Also, provides compiler which transpile you code from Typescript to JavaScript/ECMAScript. 
+	Typescript is a developer language
+
+	Transpile = Transform + Compile
+
+Introduction to TSC.exe - Typescript Compiler
+	Typescript => TSC.exe => JavaScript/ECMAScript
+
+Typescript Compiler Options [tsconfig.json] [https://www.typescriptlang.org/docs/handbook/compiler-options.html]
+
+hello.ts
+	src/hello.js
+	src/hello.js.map
+
+Why Typescript?
+
+1) Strong Typing
+2) Access Modifiers
+3) Interfaces
+4) Generics
+5) Namespaces
+6) Meta Programming
+7) New Types
+	any, void
+...
+
+Typescript Features Learning requirements - 
+
+1)Install Node JS
+	https://nodejs.org/en [LTS]
+2) Visual Studio Code
+	https://code.visualstudio.com/download
+
+3) Install Typescript globally on your machine using NPM 
+	npm install -g typescript
+
+
+Naming Conventions - 
+1) variables, parameters, functions name will always be written in camelCasing
+2) Constant - Objects and Array [CapitalCamelCasing] and Primitive Constant variable name [CAPITALCASING]
+3) Class names - CapitalCamelCasing
+4) Object Property names must be camelCasing
+	
+
+for-of loop - brain is Symbol.Iterator
+
+function - when you write a function using function keyword, it has implicit binding with this keyword
+
+arrow-function - when you write a function as an arrow function, arrow function does not have implicit binding with this keyword
+
+Named Constants are Enum which are supported only in Typescript [JavaScript does not has Enum]
+
+
+Day - 1 Assignment - 
+
+	1) How many questions did we solve out of 30 questions from Why Typescript?
+	2) Recap Object Oriented Programming concepts!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
