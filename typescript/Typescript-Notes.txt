@@ -60,6 +60,164 @@ Day - 1 Assignment -
 	2) Recap Object Oriented Programming concepts!
 
 
+Day - 2
+
+Introduction to Object Oriented Programming
+
+1) 4-Major pillars of OOP
+	i) Abstraction
+	ii) Encapsulation - You will hide the detailed implementation
+		Class [Access Modifiers - Private, Public, Protected]
+	iii) Inheritance - Reusability
+		Generalization - To - Specialization
+		[Person <= Customer <= PrimeCustomer ]
+		Different Types of class - [Abstract class, Concrete class, Final/Sealed class]
+		Relationship - [IS-A Ex. Customer Is-A Person/PrimeCustomer  Is-A Customer]
+		
+		Has-A Relationship [Person Has-An Address]
+		class Address { ... }
+		class Person {
+			public Address address {get;set;}
+		}
+
+		Types - Single/Multiple/Multi-Level/Hybrid/Hierarchy 
+
+	iv) Polymorphism - One message implemented using many forms
+		a) Overloading/Static/Early Binding/Compile Time
+			Method name is same but the number of parameters or types of parameter should be different. Overloading can be achieved within the class or into inheritance. Return type is never considered.
+		b) Overriding/Dynamic/Late Binding/Runtime
+			Method signature/prototype must be same. Only implementation will change and is achieved into inherited class only
+			
+		
+How do we use class?
+1) By creating an instance of a class
+	Customer customer = new Customer();
+2) By extending the class
+	class PrimeCustomer extends Customer{
+
+	}
+
+SOLID Principles - 
+	
+
+SOA - Service Oriented Architecture
+
+interface IPhysics{
+	physicsCalci();
+}
+
+interface IChemistry{
+	chemistryCalci();
+}
+
+interface IBiology{
+	biologyCalci();
+}
+
+interface IScience extends IPhysics, IChemistry, IBiology {
+
+}
+
+class Science implements IScience{
+	physicsCalci(){...}
+	chemistryCalci(){...}
+	biologyCalci(){...}
+}
+
+IPhysics phy = new Science(); //Physics HoD to access only physics method
+IBiology bio = new Science(); //Chemistry HoD to access only chemistry method
+IChemistry chem = new Science(); //Biology HoD to access only biology method
+IScience sci = new Science(); //Science HoD to access all physics, chemistry and biology methods
+
+
+class Math{
+	public int Addition(int i, int j){....}
+	public int Addition(int i, int j, int k){....}
+	public double Addition(double i, double j){....}
+}
+
+In JavaScript, Generics are mimicked as duck typing syntax
+
+function insert(person){
+
+}
+
+Purchase Order System - 
+	Customers, Orders, OrderDetails, Categories, Products, Supplier, Shipper, Invoice
+		Perform CRUD operations on each entity/table
+
+Generics [Interface/Class/Method/Property]
+
+T=Type
+
+interface ICommonCrud<T> {
+	getAll():T[];
+	getDetails(id):T;
+	insert(T item):void;
+	update(T item):void;
+	delete(id):void;
+}
+
+class CommonCrud<T> implements ICommonCrud<T>{
+	logic
+}
+
+ICommonCrud<Customer> customerCrud=new CommonCrud<Customer>();
+ICommonCrud<Employee> customerCrud=new CommonCrud<Employee>();
+
+Introduction JavaScript Module Patterns
+
+1) CommonJS Module System [Node JS]
+    example1.js
+	module.exports={
+		func1:function(){},
+		func2:function(){},
+		func3:function(){},
+		....
+	}
+
+     app.js
+	const obj1 = require("./example1);
+
+2) AMD - Asynchronous Module Definition Pattern
+3) UMD - Universal Module Definition Pattern
+4) ESM - ECMAScript Module Pattern
+	
+	import and export keyword
+
+	1) Export - Allowing the module functionalities accessed by another module
+			1) Default Export [Only one default export module] Used for interoperability with other module systems [like AMD]
+			2) Named Export [Multiple Named Exports]
+	2) Import - Accessing the exported functionalities in a module by importing the other modules
+			1) Import syntax for default export without {} brackets
+			2) Import syntax for named exports with {...} brackets
+			3) Import all [import * as] syntax
+		 
+
+	Benefits - 
+		1) Modularity [Dividing your application code into number of JavaScript files]
+		2) Reusability
+		3) Modules get loaded exactly once
+		4) Singleton pattern implementation
+		5) You can load modules eagerly or lazily 
+
+	The way module are processed - 
+		1) Module Resolution [Top-To-Bottom]
+		2) Module Loading [Bottom-To-Top]
+		3) Module Execution [After loading the module]
+
+
+Meta Programming - 
+
+@required("required field")
+pubic int someId;
+@email()
+@cors()
+
+
+
+
+
 
 
 

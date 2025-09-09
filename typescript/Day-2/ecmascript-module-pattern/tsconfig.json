@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "outDir": "src",
+        "sourceMap": true,
+        "target": "es2022",
+        "noEmitOnError": true,
+        "module": "nodenext",
+        "esModuleInterop": true,
+        "moduleResolution": "nodenext",
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "isolatedModules": true,
+        "experimentalDecorators": true
+    }
+}
