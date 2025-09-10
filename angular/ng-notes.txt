@@ -1,0 +1,188 @@
+Angular 20.x [Developing PoC - Proof-Of-Concept] [PoC - MEAN Stack - MongoDB-Express JS-Angular-Node JS]
+	Authentication and Authorization [Token Based - JWT] [SPA - Single Page Application]
+	Security Trimming with most of the features of Angular framework
+
+How endpoint looks like?
+	https://jsonplaceholder.typicode.com/posts
+
+1) Install MongoDB Community Server
+	https://www.mongodb.com/try/download/community
+
+2) Download Mongo Shell [.zip]
+	https://www.mongodb.com/try/download/shell
+
+What is Angular?
+	Angular is a framework used for application development with number of features.
+
+Why Angular?
+1) One framework for different platforms [Web/Desktop/Mobile Web/Mobile]
+2) PWA - Progressive Web Application Development [Online/Offline]
+3) Angular is modular framework
+4) You can also develop you application in modular way
+5) It will help load application functionalities in a eager or lazy way
+6) You can develop Angular application as SPA - Single Page Application
+7) Angular provides routing library @angular/router
+8) Provides rich animation @angular/animations 
+9) Angular supports multiple languages for development
+	[Typescript/Dart/JavaScript]
+10) Angular offers component based development [In-built components]
+11) Angular offers number of directives [out-of-the-box] and you can also develop your own directives
+12) Angular offers rich data binding support
+	[One-Way [Source-To-Destination/Destination-To-Source]/Two-Way]
+13) Change Detection Cycle [CDC]
+14) Zone.js [Polyfill]
+15) Zoneless Change Detection [Released Development Preview for zoneless]
+16) Data Formatting - using Angular Pipe [In-built/Custom/Third-party]
+17) Angular offers service based implementation [Clear separation between logic and view/display + reusability of data and logic]
+18) In-built container with dependency injection functionality
+19) Angular comes with built-in number of services which we can use via D.I.
+20) Angular provides library for HTTP calls [AJAX] @angular/common/http
+21) Angular has official components library and CDK - [Component Development Kit] along with themes
+	Angular Material - @angular/materials
+22) Angular application development - 
+	I) Project/Application
+	II) Library - Share the components/services/pipes across multiple angular application in your organization/public
+23) Angular Element Development - Can be used in non-angular applications. For Ex. React/Vue/Html/...
+24) Angular Standalone development [Component/Directive/Pipe] 
+	Without NgModule
+25) Angular rich Forms - 
+	I) Template Driven Forms
+	II) Reactive Forms
+26) Angular team offered a CLI - [Command Line Interface] @angular/cli to create Angular applications - 
+	Comes with default project structure with 3-environments [Development/Testing/Production]
+27) Default testing framework integration with Angular is -
+	Jasmine 
+29) Test Runner Karma
+30) Offered Control Follow Statements [Earlier we used directives for the same]
+	Earlier - *ngFor/*ngIf/*ngSwitch
+	Today - @if { }/@if-else { }/@switch { }/@for { }
+31) Signals [Stable in 20+]
+32) RxJS - Reactive Extensions for JavaScript [Library]
+	Observable/Observer pattern with number of operators. Developers use this instead of Promise Object of ECMAScript
+33) Compilation - 
+	JIT Compilation [Just-In-Time Compilation]
+	AoT Compilation [Ahead-Of-Time Compilation]
+34) Angular uses Ivy rendering engine [One of the fastest rendering engines]
+35) Angular offers speed and performance
+36) Angular offers SSR [Server Side Rendering]
+37) Angular provides support for internationalization using [i18n library]
+
+CSR - Client Side Rendering [is not optimized for search]
+
+Creating First Angular application - 
+
+1) Install Angular CLI tool globally on your machine using package manager [NPM]
+	npm install -g @angular/cli [Install it once/when you want update]
+
+2) Create new Angular application using Angular CLI
+	ng new first-bosch-ng-app
+3) Change the directory and navigate to ng app folder
+	ng serve
+
+
+angular.json contains configuration of Angular application for different environments [dev/test/prod]
+
+How does Angular application run? [Angular Application's Bootstrapping Process]
+
+1) When you create angular application using CLI tool, it will always contain one component which gets rendered in your browser via index.html
+
+
+Component [.ts(logic)/.html(display)/.css(styling)/.spec.ts(Unit test cases)]
+
+Angular Coding Style Guide - 
+
+
+https://angular.dev/style-guide
+
+Configure Bootstrap CSS Framework in Angular application?
+
+
+Configure JavaScript bundle from the official bootstrap bundle
+	npm install bootstrap
+
+For themes, you can use third-party bootstrap CSS file
+	npm install bootswatch
+
+
+Angular CLI generate command - 
+	1) Check which generate commands are possible using ng tool
+		ng g --help
+
+Components Generation
+
+	ng g c movies/movies-list
+	ng g c movies/movie-details
+
+Models Generation
+	ng g cl movies/movie-model
+
+Service Generation
+	ng g s movies/movie-api
+
+Pipe Generations
+	ng g p movies/filter-by-pipe
+
+Directive
+	ng g d movies/snowfall
+
+movies
+	movies-list [component]
+
+	movie-details [component]
+
+	movie-model.ts [model]
+
+	movie-api.ts [service]
+	
+	date-pipe.ts
+	
+
+Proof-Of-Concept - 
+
+Bosch Events Portal - [Roles - Employee, Hr]
+
+	Employee Role - 
+		1) Employee will register in our portal
+		2) Employee can see other employees list and their details
+		3) Employee can see list of events and see the details of the events
+		4) Register for an event
+		5) They can give feedback to attended events
+	Hr Role - 
+		Everything an employee can do, Hr can also do the same thing
+		6) Hr can create/postpone/cancel events
+		7) Hr can take feedback
+		8) Hr can generate reports
+
+
+Day-1
+	1) Create new Angular application -
+		bosch-events-portal
+	2) Configure CSS Bootstrap framework with third-party theme [Bootswatch] in our portal
+	3) Run and test the application by adding static HTML contents in root component
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
