@@ -161,24 +161,96 @@ Day-1
 	3) Run and test the application by adding static HTML contents in root component
 
 
+Introduction to Components - 
+
+1) Component is a part of webpage
+2) Component extends the vocabulary of Html elements
+3) Component has its own appearance and behaviour 
+4) Component also maintain its own state within itself 
+
+You can add component files - 
+	1) app.ts [Logic/Maintain the state] [Component Class]
+	2) app.html [Display] [Component Template]
+		Template Types - 
+			1) Inline Template
+				i) Single Line
+				ii) Multi-line
+			2) Linked/External Template
+				.html page
+	3) app.css [Styling]
+	4) app.spec.ts [Testing]
+
+Building Blocks - 
+
+1) Component
+2) Service [Sharing data and logic]
+3) Pipe [Data Formatting]
+4) Directive [Changing the behaviour of any element]
+
+All major building blocks are classes in Angular
+
+Angular offers number of metadata which you use using decorator pattern [@]. Metadata tells angular framework how to process a class
+
+All metadata comes from core library of Angular - @angular/core
+
+
+@Component({
+	selector : 'app-root',
+	templateUrl : './app.html',
+	imports : [dependencies - In-built dependencies of Angular framework/Custom Dependencies]
+})
+export class App {
+
+}
+
+@Injectable({...}) [Service]
+export class UserAuthentication {
+
+}
+@Pipe({...}) [Pipe]
+export class DateGlobalization {
+
+}
+@Directive({...}) [Directive]
+export class Highlighter {
+
+}
+
+
+Data Formatting - Pipes [In-built/Third-party/Custom Pipes]
+
+Using pipes - 
+	property | pipe
+	property | pipe:arg1:arg2
 
 
 
+How does pipe work internally?
 
+import { Pipe, PipeTransform } from "@angular/core";
 
+@Pipe({
+	name:'myCustomPipe'
+})
+export class PipeName implements PipeTransform{
+	transform(value : unknown, ...args:unknown[]):unknown{
+		//write logic for the data formatting
+	}
+}
 
+property | myCustomPipe:'one':'two'
 
+startDate | multiLingualDate:'hi-IN'
 
+---------------------------
 
+Day-2 Assignments - 
 
-
-
-
-
-
-
-
-
+	1) Add EmployeesList and EmployeeDetails components in employees feature folder
+	2) Add filter to filter employees by their name [Filter - Starts with]
+	3) Display Employee Details component in Modal box
+	4) Add sorting on EventsList and EmployeesList tables [On all columns]
+	5) Correct the working of search after changing the page number in both [EventsList and EmployeesList]
 
 
 
