@@ -1,3 +1,7 @@
+Trainer Name - Pravinkumar Dabade
+Email - dabade.pravinkumar@gmail.com
+Contact # - 9665622460
+
 Angular 20.x [Developing PoC - Proof-Of-Concept] [PoC - MEAN Stack - MongoDB-Express JS-Angular-Node JS]
 	Authentication and Authorization [Token Based - JWT] [SPA - Single Page Application]
 	Security Trimming with most of the features of Angular framework
@@ -378,8 +382,9 @@ It is a unique address to a specific resource of your application. In Angular, C
 2) Angular router library offers one component as a placeholder - where your component will get loaded - 
 	<router-outlet></router-outlet>
 3) Number of directives for declarative route configuration
-	
+	routerLink, routerLinkActive
 4) It also offers programmatic routing functionality 
+	Router Service
 5) Reading the route parameter values/ reading query string values
 	http://localhost:4200/home?state=maharashtra&country=ind
 6) Route Protection -
@@ -393,8 +398,64 @@ Day-3 Assignments -
 	Configure routes for employees list
 
 
+Authentication - 
+	Verifying the identity of an user -
+		user Id and password/biometric/social network/...
+
+Authorization - 
+	You will grant or revoke the permissions from a role/user to contents of you web application
 
 
+Preferred way - 
+	send the token with cookie over HTTPS and the cookie must be Http Only cookie
+
+
+Angular Forms - 
+	1) Template Driven Form - 
+		@angular/forms
+			FormsModule
+				[(ngModel)] = use two-way data Binding
+		Angular has control over template driven. Framework decides how to process this form.
+		For Example Validation - Angular decides how to handle validations on the form by adding/removing classes dynamically base on the native validations which are implemented in Html5 
+
+	2) Reactive Form - 
+		@angular/forms
+			ReactiveFormsModule
+				FormGroup, FormControl, Validators
+				Developer has control over the reactive form and can decide how the form should work [accepting the data and validations]
+
+
+<form [formGroup]="customer.customerForm"> [FormGroup]
+	<input id="..." name="..." formControlName="customerId" ..../> [FormControl] [Validators - one or more than one validations]
+	<input id="..." name="..." formControlName="customerCode" ..../> [FormControl] [Validators - one or more than one validations]
+	<div [formGroup]="customer.customerForm.address">
+		<input id="..." name="..." formControlName="roadNo"/> [FormControl] [Validators - one or more than one validations]
+		<input id="..." name="..." formControlName="areaName"/> [FormControl] [Validators - one or more than one validations]
+	</div>
+</form>
+
+
+class Customer{
+	customerForm:FormGroup = new FormGroup({
+		customerId: new FormControl(state, Validators.required),
+		customerCode: new FormControl(state, [Validators.required, Validators.minlength(6), Validators.maxlength(6)],
+		address:new FormGroup({
+			roadNo: new FormControl(state, Validators.required),
+			areaName: new FormControl(state, Validators.required),
+
+		}),
+		...
+	});
+}
+
+const Customer = {
+	customerId:2839,
+	contactName:"ssss",
+	address:{
+		roadNo:239,
+		areaName:''
+	}
+}
 
 
 
